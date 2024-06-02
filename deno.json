@@ -1,5 +1,11 @@
 {
   "tasks": {
-    "dev": "deno run --watch main.ts"
+    "dev": "deno run --unstable-kv --allow-net --watch src/main.ts"
+  },
+  "deploy": {
+    "project": "eadce61e-cf34-41dd-95f4-78bdf5456aaa",
+    "exclude": ["**/node_modules", ".vscode"],
+    "include": [],
+    "entrypoint": "src/main.ts"
   }
 }
