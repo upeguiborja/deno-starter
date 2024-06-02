@@ -1,3 +1,4 @@
+import loginHandler from "./handlers/loginHandler.ts";
 import signupHandler from "./handlers/signupHandler.ts";
 import { ApplicationError, buildResponse } from "./utils.ts";
 
@@ -22,7 +23,9 @@ type RouteHandler = {
 };
 
 const routes: RouteHandler = {
-  "/login": null,
+  "/login": {
+    [HttpMethod.POST]: loginHandler,
+  },
   "/signup": {
     [HttpMethod.POST]: signupHandler,
   },

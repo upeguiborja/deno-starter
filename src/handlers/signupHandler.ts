@@ -1,6 +1,6 @@
 import { ApplicationError, buildResponse, getJson, kv } from "../utils.ts";
 
-interface SignupPayload {
+export interface SignupPayload {
   email: string;
   password: string;
   first_name: string;
